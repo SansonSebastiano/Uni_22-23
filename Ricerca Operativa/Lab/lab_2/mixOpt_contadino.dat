@@ -1,0 +1,28 @@
+set I := lat pat;
+set J := ett sem tub conc;
+
+param maxNumProd := 7;
+
+param P := 
+	lat	3000
+	pat 5000
+;
+
+param Q :=
+	ett		11
+	sem		70
+	tub		18
+	conc	145
+;
+
+param A := 
+	lat ett 	1
+	lat sem 	7
+	lat tub 	0
+	lat conc 	10
+	
+	pat ett		1
+	pat sem		0
+	pat tub		3
+	pat conc	20
+;

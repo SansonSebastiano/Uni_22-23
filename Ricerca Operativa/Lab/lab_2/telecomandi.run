@@ -1,0 +1,7 @@
+reset;
+model telecomandi.mod;
+option solver gurobi;
+solve;
+display guadagno_compl, xA, xB;
+
+
