@@ -3,6 +3,9 @@
 #Can you discover the meaning behind these numbers? (1, 9, 4) (4, 2, 8) (4, 8, 3) (7, 1, 5) (8, 10, 1)
 
 
+from stat import ST_GID
+
+
 with open('CyberSecurity/2-Lezione/Challenges/1_valley_of_fear/book.txt', 'r') as file:
     contents = file.read()
 
@@ -17,9 +20,4 @@ for row in key:
     words = line.split(' ')
     output.append(words[row[2] - 1])
 
-print(' '.join(output))   #the flag is journals plates
-
-
-#print(key[0][0])
-
-#print(paragraphs[7])
+print(' '.join(output))   # = the flag is journals plates
