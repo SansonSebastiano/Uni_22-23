@@ -11,7 +11,7 @@ with open('CyberSecurity/2-Lezione/Challenges/1_valley_of_fear/book.txt', 'r') a
 
 paragraphs = contents.split('\n\n')
 
-key = [[1,9,4], [4,2,8], [4,8,3], [7,5,1], [8,10,1]]
+key = [[1,9,4], [4,2,8], [4,8,3], [7,1,5], [8,10,1]]
 output = []
 
 for row in key:
@@ -20,4 +20,4 @@ for row in key:
     words = line.split(' ')
     output.append(words[row[2] - 1])
 
-print(' '.join(output))   # = the flag is journals plates
+print(' '.join(output))   # = the flag is Ceremonial plates
