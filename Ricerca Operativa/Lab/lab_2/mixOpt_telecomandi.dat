@@ -1,7 +1,10 @@
 set I := tipoA tipoB;
 set J := displ nav tast log trasm led;
 
-param maxNumProd := 100; # da chiedere al prof
+param maxNumProd := 
+	tipoA	5
+	tipoB	8
+;
  
 param P :=
 	tipoA 3
@@ -9,26 +12,26 @@ param P :=
 ;
 
 param Q :=
-	displ 10
-	nav 9
-	tast 21
-	log 18
-	trasm 12
-	led 10
+	displ 	10
+	nav 	9
+	tast 	21
+	log 	18
+	trasm 	12
+	led 	10
 ;
 
 param A :=
 	tipoA displ 1
-	tipoA nav 1
-	tipoA tast 2
-	tipoA log 2
+	tipoA nav 	1
+	tipoA tast 	2
+	tipoA log 	2
 	tipoA trasm 1
-	tipoA led 1
+	tipoA led 	1
 	
 	tipoB displ 2
-	tipoB nav 0
-	tipoB tast 3
-	tipoB log 2
+	tipoB nav 	0
+	tipoB tast 	3
+	tipoB log 	2
 	tipoB trasm 3
-	tipoB led 0
+	tipoB led 	0
 ;

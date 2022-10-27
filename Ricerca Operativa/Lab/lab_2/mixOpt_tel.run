@@ -1,0 +1,6 @@
+reset;
+model mixOpt_tel.mod;
+data mixOpt_telecomandi.dat;
+option solver cplex;
+solve;
+display profitto, x;

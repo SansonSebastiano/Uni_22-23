@@ -1,0 +1,27 @@
+set I := 
+	tm 	# telefonate alla mattina
+	ts	# telefonate alla sera
+;
+set J := 
+	ds 	# donne sposate
+	dns # donne non sposate
+	us 	# uomini sposati
+	uns	# uomini non sposati
+;
+
+param C :=
+	tm	1.1
+	ts	1.6
+;
+
+param D :=
+	ds	150
+	dns	110
+	us	120
+	uns	100
+;
+
+param A : 	ds	dns	us	uns	:=
+	tm		0.3	0.1	0.1	0.1
+	ts		0.3	0.2	0.3	0.15
+;

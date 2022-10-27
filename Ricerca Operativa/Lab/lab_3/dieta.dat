@@ -1,0 +1,20 @@
+set I := verdura carne frutta;
+set J := proteine ferro calcio;
+
+param C :=
+	verdura	4
+	carne	10
+	frutta	7
+;
+
+param D :=
+	proteine	20
+	ferro		30
+	calcio		10
+;
+
+param A (tr) : verdura	carne	frutta:=
+	proteine	5		15		4		
+	ferro		6		10		5
+	calcio		5		3		12
+; 

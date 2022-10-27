@@ -1,0 +1,6 @@
+reset;
+model dieta2.mod;
+data indagine.dat;
+option solver xpress;
+solve;
+display costo, x;
