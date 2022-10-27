@@ -1,6 +1,6 @@
 # Sherlock has a mystery in front of him. Help him to find the flag.
 
-with open('CyberSecurity/2-Lezione/Challenges/2_sherlock/challenge.txt', 'r') as file:
+with open('challenge.txt', 'r') as file:
     contents = file.read()
 
 upperContent = ''.join(c for c in contents if c.isupper())

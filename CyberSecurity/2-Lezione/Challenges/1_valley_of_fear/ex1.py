@@ -6,7 +6,7 @@
 from stat import ST_GID
 
 
-with open('CyberSecurity/2-Lezione/Challenges/1_valley_of_fear/book.txt', 'r') as file:
+with open('book.txt', 'r') as file:
     contents = file.read()
 
 paragraphs = contents.split('\n\n')
