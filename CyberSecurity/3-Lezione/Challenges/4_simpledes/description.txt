@@ -32,7 +32,7 @@ His system works as follows:
 	13. increment r
 	
 	
-He has encryped a message using Key="Mu", and R=2. See if you can decipher it into plaintext.
+He has encrypted a message using Key="Mu", and R=2. See if you can decipher it into plaintext.
 
 Submit your result to Larry in the format Gigem{plaintext}.
 
