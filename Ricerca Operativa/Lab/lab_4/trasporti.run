@@ -1,0 +1,6 @@
+reset;
+model trasporti.mod;
+data trasporti.dat;
+option solver cplex;
+solve;
+display costo_totale, x;

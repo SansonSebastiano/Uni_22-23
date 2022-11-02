@@ -1,0 +1,23 @@
+set S := IT CN FR;
+set B := Intesa Unicredit Veneta Suisse Cina;
+
+# sia W che A sono indicizzati nella stessa maniera :
+param : W		A 		:=
+	IT	200		10000
+	CN	180		20000
+	FR	200		10000
+;
+
+param C : Intesa	Unicredit	Veneta	Suisse	Cina :=
+	IT		5.5			7.5		6.9		8.0		10.3
+	CN		15.0		14.3	13.0	16.4	5.0
+	FR		6.0			7.8		6.3		6.8		11.0
+;	
+
+param R :=
+	Intesa		7100
+	Unicredit	3400
+	Veneta		9700
+	Suisse		5200
+	Cina		3050
+;	

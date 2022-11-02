@@ -1,0 +1,6 @@
+reset;
+model cup.mod
+data cup.data
+option solver gurobi;
+solve;
+display costo, x;

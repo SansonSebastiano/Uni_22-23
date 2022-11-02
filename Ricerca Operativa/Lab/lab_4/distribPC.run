@@ -1,0 +1,6 @@
+reset;
+model distribPC.mod;
+data distribPC.dat;
+option solver cplex;
+solve;
+display costo, x;
