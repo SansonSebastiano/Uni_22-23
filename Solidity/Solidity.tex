@@ -1,0 +1,112 @@
+
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{hyperref}
+\lstset{language=XML,basicstyle=\ttfamily,breaklines=true}
+
+\title{\textbf{Solidity}}
+\author{Sanson Sebastiano}
+\date{2022}
+
+
+
+\begin{document}
+    \maketitle
+    \tableofcontents
+    \clearpage
+
+    \section{Layout del file sorgente}
+        \begin{itemize}
+            \item \textbf{SPDX-License-Identifier:} necessario per indicare la licenza del codice sorgente, in quanto per questioni di fiducia meglio se pubblico, del smart contract.
+            Se non si vuole specificare la licenza, usare il valore speciale \textit{UNLICENSED}.
+
+            \item \textbf{pragma solidity \textgreater{}= x.y.z:} indica la versione di Solidity che si sta utilizzando. \\
+            \textit{pragma} è una keyword che abilita certe features del compilatore.
+
+            \item \textbf{import "filename":} importa un file esterno.
+        \end{itemize}
+
+    \section{Struttura di un contratto}
+        \begin{itemize}
+            \item \textbf{State variables:} sono le variabili che vengono salvate nella blockchain.
+            \href{https://docs.soliditylang.org/en/v0.8.17/types.html#types}{Qui} ci sono tutti i tipi di variabili di stato.
+
+            \item \textbf{Functions:} sono le funzioni che vengono eseguite dal contratto.
+            Possono essere definite come esterne o interne al contratto e possono avere differenti livelli di visibilità.
+
+            \item \textbf{Function modifiers:} ?
+
+            \item \textbf{Events:} sono interfacce convenienti con le funzionalità di registrazione EVM.
+            
+            \item \textbf{Errors:} permette di definire errori personalizzati, attraverso un nome e parametri. \\
+            \textit{Revert statements} ?
+            
+            \item \textbf{Struct type}
+
+            \item \textbf{Enum type}
+        \end{itemize}
+
+        \section{Units and Globally Available Variables}
+            \begin{itemize}
+                \item \textbf{Ether unit:} 
+                    \begin{itemize}
+                        \item \textit{wei} = 1
+                        \item \textit{gwei} = 10e9
+                        \item \textit{ether} = 10e18
+                    \end{itemize}
+
+                \item \textbf{Time units:} secondi, minuti, ore, giorni, settimane, anni.
+                
+                \pagebreak
+
+                \item \textbf{Special Variables and Functions:} 
+                \begin{itemize}
+                    \item \textbf{block:} contiene informazioni su un blocco.
+                    \item \textbf{msg:} contiene informazioni su un messaggio.
+                    \item \textbf{tx:} contiene informazioni su una transazione.
+                    \item \textbf{abi:} contiene funzioni per la codifica e la decodifica di valori ABI.
+                    \item \textbf{type:} contiene informazioni sul tipo di un contratto.
+                    \item \textbf{blockhash:} restituisce il blocco hash di un blocco precedente.
+                    \item \textbf{gasleft:} restituisce la quantità di gas rimanente.
+                    \item \textbf{now:} restituisce il timestamp corrente (secondi dal 1970).
+                    \item \textbf{addmod:} restituisce (x + y) % k dove k è un numero non nullo.
+                    \item \textbf{mulmod:} restituisce (x * y) % k dove k è un numero non nullo.
+                    \item \textbf{keccak256:} restituisce il risultato di una funzione di hash di 256 bit.
+                    \item \textbf{sha256:} restituisce il risultato di una funzione di hash di 256 bit.
+                    \item \textbf{ripemd160:} restituisce il risultato di una funzione di hash di 160 bit.
+                    \item \textbf{ecrecover:} recupera l'indirizzo dell'account che ha firmato un messaggio.
+                \end{itemize}
+            \end{itemize}
+
+            \section{Expressions and Control Structures}
+                \begin{itemize}
+                    \item \textbf{Control Structures:} supporta \textit{if, else, while, do-while, for, break, continue, return, throw, revert, require, assert, try/catch}.
+                    
+                    \item \textbf{Function calls:}
+                        \begin{itemize}
+                            \item \textbf{Internal function calls:} sono le chiamate di funzioni interne al contratto. \\
+                            Solo le funzioni di uno stessa istanza di un contratto possono essere chiamate internamente. \\
+                            Sconsigliata la ricorsione.
+
+                            \item \textbf{External function calls:} sono le chiamate di funzioni esterne al contratto. \\
+                            Sono chiamate del tipo \textit{otherContract.functionName()} e \textit{this.functionName()}. \\
+                            \textbf{Nota:} una chiamata esterna non crea una propria transazione, ma è parte di una transazione complessiva. 
+                            \\
+
+                            È possibile specificare un ammontare di \textit{Wei} o \textit{gas} con la chiamata. \\
+                            \textbf{Nota:} è consigliato non specificare il valore del gas esplicitamente in quanto i costi del gas potrebbero cambiare nel tempo.
+                        \end{itemize}
+
+                    \item \textbf{Function Calls with Named Parameters:} il nome dei parametri possono essere specificati in qualsiasi ordine se sono racchiusi tra \textit{\{\}}. \\ 
+                    Una chiamata a questa funzione, la lista dei parametri può essere in ordine differente ma i nomi devono coincidere con quelli specificati nella dichiarazione di tale funzione.
+
+                    \item \textbf{Omitted Names in Function Definitions:} è possibile omettere i nomi dei parametri e del valore di ritorno in una dichiarazione di funzione. \\
+                    Saranno comunque presenti nello \textit{stack} ma saranno inacessibili dai nomi.
+
+                    \item \textbf{Creating Contracts via \textit{new}:} un contratto può creare un altro contratto con la keyword \textit{new}. 
+                    
+
+                \end{itemize}
+
+\end{document}
