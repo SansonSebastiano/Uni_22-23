@@ -1,0 +1,16 @@
+# primale
+reset;
+option solver cplex;
+model creme.mod;
+data creme.dat;
+solve;
+display ricavo, x;
+display v_disp.dual, v_disp.body, disp;
+
+# duale
+reset;
+model creme_duale.mod;
+data creme.dat;
+solve;
+display costo, u;
+display convenienza.body, prezzo;

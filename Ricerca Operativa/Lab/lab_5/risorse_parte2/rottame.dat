@@ -1,0 +1,23 @@
+set ROTTAMI := T1 T2 T3 T4;
+set LEGHE := L1 L2;
+set METALLI := Piombo Zinco Stagno;
+
+param cont : T1   T2   T3   T4 :=
+Piombo      0.4  0.3  0.25 0.38
+Zinco       0.35 0.4  0.35 0.32
+Stagno      0.25 0.3  0.4  0.3;
+
+param prezzo :=
+T1 2.5
+T2 1.8
+T3 2
+T4 2.2;
+
+param cont_max : L1   L2 :=
+Piombo          0.3  0.46
+Zinco           0.6  0.38
+Stagno          0.42 0.56;
+
+param ordine :=
+L1 1500
+L2 2000;

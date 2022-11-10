@@ -1,0 +1,16 @@
+set PRODOTTI := fondente gianduia;
+set RISORSE := zucchero cacao lavoro;
+
+param prezzo :=
+fondente 24
+gianduia 14;
+
+param consumo_risorse : fondente gianduia :=
+zucchero 3 2
+cacao    4 1
+lavoro   2 1;
+
+param disp :=
+zucchero 1200
+cacao 1000
+lavoro 700;

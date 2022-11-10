@@ -1,0 +1,9 @@
+reset;
+model ovile.mod;
+data ovile.dat;
+
+option solver cplex;
+solve;
+
+display f;
+display x;

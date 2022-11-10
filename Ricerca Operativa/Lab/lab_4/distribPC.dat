@@ -1,7 +1,7 @@
 set S := IT CN FR;
 set B := Intesa Unicredit Veneta Suisse Cina;
 
-# sia W che A sono indicizzati nella stessa maniera :
+# sia W che A sono indicizzati nello stesso modo :
 param : W		A 		:=
 	IT	200		10000
 	CN	180		20000
@@ -21,3 +21,9 @@ param R :=
 	Suisse		5200
 	Cina		3050
 ;	
+
+param stab_bil := 'Italia';
+param bil1 := 0.25;
+param bil2 := 0.30;
+
+

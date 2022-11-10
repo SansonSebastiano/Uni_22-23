@@ -3,4 +3,17 @@ model distribPC.mod;
 data distribPC.dat;
 option solver cplex;
 solve;
-display costo, x;
+
+display costo;
+display {i in S, j in B : x[i,j] > 0} x[i,j];
+display {i in S} (produzione[i].body, a[i]);
+
+printf "\n\n********** IPOTESI **********\n";
+let bil2 := 0.40;
+solve;
+
+display {i in S} (produzione[i].body, a[i]);
+
+
+printf "\n\n********** ELENCO FORNITURE ESCLUSIVE **********\n";
+for{j in B, i in S : x[i,j] > 0} {printf "%12s -> %12s: %8.2f / %8.2f %c\n", i, j, x[i,j], b[j], if(x[i,j] == b[j] then '*' else ''};

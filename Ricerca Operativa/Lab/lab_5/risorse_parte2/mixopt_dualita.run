@@ -1,0 +1,110 @@
+option solver cplex;
+option solver_msg 0;
+
+#1.1 soluzione del problema PRIMALE
+printf "\n\n****** 1 - SOLUZIONE DEL PRIMALE E DEL DUALE ******\n";
+reset; 
+model mixopt2.mod; 
+data mixopt_creme.dat;
+solve; 
+display ricavo, x;
+display v_disp.dual, v_disp;
+
+#1.2 soluzione del problema DUALE
+reset; 
+model duale.mod; 
+data mixopt_creme.dat;
+solve; 
+display costo, u;
+display convenienza.body, prezzo; 
+
+#2 verifica dualità forte
+printf "\n\n****** 2 - VERIFICA DUALITÀ FORTE ******\n";
+printf "ricavo == costo!!!\n";
+
+#ripristino modello e soluzioni del primale
+reset; 
+model mixopt2.mod; 
+data mixopt_creme.dat;
+solve; 
+
+
+#3 verifica condizioni di complementarietà primale-duale
+printf "\n\n****** 3 - VERIFICA CCPD ******\n";
+printf "* var duali, scarti primali: vedi tabella sotto\n";
+display v_disp.dual, v_disp.body, disp;
+printf "* var primali, scarti duali: vedi risultati sopra)\n";
+
+
+#4 analisi delle variazioni
+printf "\n\n****** 4 - ANALISI VARIAZIONI ******\n";
+param old_ricavo;
+param prezzo_ombra{RISORSE};
+param variazione{RISORSE};
+param expected_ricavo;
+let old_ricavo := ricavo;
+
+let prezzo_ombra['zucchero'] := v_disp['zucchero'].dual;
+
+printf "***diminuisco zucchero di 50\n";
+let variazione['zucchero'] := -50;
+let expected_ricavo := old_ricavo + variazione['zucchero'] * prezzo_ombra['zucchero'];
+let disp['zucchero'] := disp['zucchero'] + variazione['zucchero'];
+solve;
+printf "valore ottimo %.2f -> %.2f (previsto %.2f)\n", old_ricavo, ricavo, expected_ricavo;
+if (ricavo == expected_ricavo) then {
+  printf "la variabile duale vale %.2f ed è il prezzo ombra\n", v_disp['zucchero'].dual;
+} else {
+  printf"la variabile duale NON è il prezzo ombra\n";
+}
+display ricavo, x;
+display v_disp.dual, v_disp.body, disp; # dual non cambiano
+
+
+printf "***aumento zucchero di 5\n";
+let disp['zucchero'] := disp['zucchero'] - variazione['zucchero'];
+let variazione['zucchero'] := +5;
+let expected_ricavo := old_ricavo + variazione['zucchero'] * prezzo_ombra['zucchero'];
+let disp['zucchero'] := disp['zucchero'] + variazione['zucchero'];
+solve;
+printf "valore ottimo %.2f -> %.2f (previsto %.2f)\n", old_ricavo, ricavo, expected_ricavo;
+if (ricavo == expected_ricavo) then {
+  printf "la variabile duale vale %.2f ed è il prezzo ombra\n", v_disp['zucchero'].dual;
+} else {
+  printf"la variabile duale NON è il prezzo ombra\n";
+}
+display ricavo, x;
+display v_disp.dual, v_disp.body, disp; # dual non cambiano
+
+
+
+printf "***aumento zucchero di 55\n";
+let disp['zucchero'] := disp['zucchero'] - variazione['zucchero'];
+let variazione['zucchero'] := +55;
+let expected_ricavo := old_ricavo + variazione['zucchero'] * prezzo_ombra['zucchero'];
+let disp['zucchero'] := disp['zucchero'] + variazione['zucchero'];
+solve;
+printf "valore ottimo %.2f -> %.2f (previsto %.2f)\n", old_ricavo, ricavo, expected_ricavo;
+if (ricavo == expected_ricavo) then {
+  printf "la variabile duale vale %.2f ed è il prezzo ombra\n", v_disp['zucchero'].dual;
+} else {
+  printf"la variabile duale NON è il prezzo ombra\n";
+}
+display ricavo, x;
+display v_disp.dual, v_disp.body, disp; # dual cambiano
+
+
+
+#5 relazione variazione termini noti - valore var duali
+printf "\n\n****** 5 - VAR DUALI COME PREZZI OMBRA ******\n";
+printf "***aumento zucchero *UNITARIO*\n";
+let disp['zucchero'] := disp['zucchero'] - variazione['zucchero'];
+let variazione['zucchero'] := +1;
+let disp['zucchero'] := disp['zucchero'] + variazione['zucchero'];
+solve;
+printf "valore ottimo %.2f -> %.2f (previsto %.2f)\n", old_ricavo, ricavo, old_ricavo + prezzo_ombra['zucchero'];
+if (ricavo == old_ricavo + prezzo_ombra['zucchero']) then {
+  printf "la variazione della f.o. coincide con il valore variabile duale %.2f (prezzo ombra)\n", v_disp['zucchero'].dual;
+} else {
+  printf"la variazione è troppo elevata, la variabile duale NON è il prezzo ombra\n";
+}

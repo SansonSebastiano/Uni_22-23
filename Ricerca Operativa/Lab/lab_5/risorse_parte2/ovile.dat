@@ -1,0 +1,48 @@
+set CIBI := Granulare Polvere;
+set MATERIE := Avena Mais Melassa;
+set SOSTANZE := Proteine Grassi Fibre;
+set LAVORI := Macina Mescola Granulazione Polverizzazione;
+
+param costi_lavorazione :=
+Macina          0.25
+Mescola         0.05
+Granulazione    0.42
+Polverizzazione 0.17;
+
+param : costi_acquisto  disp :=
+Avena       0.13       11900
+Mais        0.17       23500
+Melassa     0.12         750;
+
+param apporto_unitario : Proteine Grassi Fibre :=
+Avena                   0.136   0.071  0.07
+Mais                    0.041   0.024  0.037
+Melassa                 0.05    0.003  0.25;
+
+param perc_min :=
+Proteine 0.095
+Grassi   0.02
+#Fibre    0
+;
+
+param perc_max :=
+#Proteine 1
+#Grassi   1
+Fibre    0.06;
+
+param domanda :=
+Granulare  9000
+Polvere   12000;
+
+param lavori_bool :=
+  [*,*,Granulare] : Avena Mais Melassa :=
+  Macina               1    1     0
+  Mescola              1    1     1
+  Granulazione         1    1     1
+  Polverizzazione      0    0     0
+  [*,*,Polvere]   : Avena Mais Melassa :=
+  Macina               1    1     0
+  Mescola              1    1     1
+  Granulazione         0    0     0
+  Polverizzazione      1    1     1;
+  
