@@ -31,3 +31,37 @@ footer .imgValidCode{
 footer{
     display: flex;
 }
+
+/*
+* ==================
+* TABELLA GIOCATORI
+* ==================
+*/
+
+thead, tfoot{
+    display: none;
+}
+
+tr, th, td{
+    display: block;
+    padding: 0;
+    white-space: normal;
+}
+
+th[data-title]::before, td[data-title]::before{
+    content: attr(data-title) ":\00a0";
+    font-weight: bold;
+}
+
+th{
+    background-color: var(--breadcolor);
+    color: white;
+}
+
+td, th{
+    border-top: none;
+}
+
+tr:first-child{
+    border-top: 1px solid #000;
+}
