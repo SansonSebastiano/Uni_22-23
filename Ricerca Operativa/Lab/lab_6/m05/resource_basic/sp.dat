@@ -1,0 +1,28 @@
+set NODE := A B C D E F;
+set ARC  :=  (A,B) (A,C)
+             (B,C) (B,D) (B,E) (B,F)
+             (C,F)
+             (D,F)
+             (E,C) (E,D)
+             (F,E)
+;
+
+
+param b  default 0 :=
+  A -1
+  F 1
+;
+
+param:	c	:=
+  A B	7
+  A C	8
+  B C	-1
+  B D	4
+  B	E	1
+  B F	5
+  C F	3
+  D	F	1
+  E C	-2
+  E D	0
+  F E	3
+;

@@ -1,0 +1,12 @@
+reset;
+model maxf.mod; #maxf.mod;
+data maxf.dat; #maxf.dat;
+option solver cplex;
+
+option relax_integrality 0;
+solve;
+display {(i,j) in ARC: x[i,j] > 0} x[i,j];
+
+option relax_integrality 1;
+solve;
+display {(i,j) in ARC: x[i,j] > 0} x[i,j];
