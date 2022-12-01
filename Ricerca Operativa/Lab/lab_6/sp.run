@@ -1,0 +1,17 @@
+reset;
+model sp.mod;
+data sp.dat;
+
+printf "\nINTERO\n";
+option relax_integrality 0;
+option solver cplex;
+solve;
+display {(i,j) in A : x[i,j] > 0} x[i,j]; 
+#f, x;
+
+printf "\nCONTINUO\n";
+option relax_integrality 1;
+option solver cplex;
+solve;
+display {(i,j) in A : x[i,j] > 0} x[i,j]; 
+#f, x;
