@@ -1,0 +1,25 @@
+### ASSUNZIONE MULTIPERIODALE ###
+#################################
+
+#INSIEMI
+set mesi := 1 2 3 4 5;
+set mesi_limitati := 3 4 5;
+
+#PARAMETRI
+param num_operai_init := 21;
+param num := 1;
+param den := 3;
+#param costo_neoassunto := 500;
+param costo_esperto := 1000;
+param incentivo := 10000;
+param base_incentivo := 10;
+param capacita_operaio := 150;
+param capacita_istruttore := 70;
+param richiesta :=
+1	2000
+2	4000
+3	7000
+4	3000
+5	3500
+;
+ 

@@ -1,0 +1,16 @@
+reset;
+model esempioPLI.mod;
+option solver cplex;
+solve;
+if (solve_result == "solved") then {
+  display x1,x2,x3,x4,x5;
+  printf "upper bound = %7.2f\n", ceil(trunc(f,10)*100)/100;
+  if ( -2*round(x1)+7*round(x2)+4*round(x3)+1.5*round(x4)+9*round(x5) <= 16
+   and -6*round(x1)+5*round(x2)+5*round(x3)+7.2*round(x4)-3*round(x5) >=  7 ) then {
+    printf "lower bound = %7.2f\n", 3*round(x1)-8*round(x2)+3*round(x3)-8*round(x4)+17*round(x5);
+  } else {
+    printf "n.d. (no lower bound available)\n";
+  }
+} else {
+  printf "infeasible\n";
+}
