@@ -1,0 +1,76 @@
+<form action="">
+    <fieldset>
+        <legend>Nome e Cognome del giocatore</legend>
+        <label for="nome">Nome e Cognome:</label>
+        <input type="text" name="nome" id="nome"  value="" maxlength="50"/>
+    </fieldset>
+
+    <fieldset>
+        <legend>Ruolo di capitano</legend>
+			<div>
+				<label for="si">Si</label>
+				<input type="radio" name="capitano" id="si" value="si">
+			</div>
+			<div>
+				<label for="no">No</label>
+				<input type="radio" name="capitano" id="no" value="no">
+			</div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Nascita</legend>
+        <label for="data">Data:</label> 
+        <input type="date" name="data" id="data" value="" maxlength="10"/>
+
+        <label for="luogo">Luogo:</label>
+        <input type="text" name="luogo" id="luogo" value="" maxlength="20"/>
+    </fieldset>
+
+    <fieldset>
+        <legend>Dati giocatore</legend>
+        <div>
+            <label for="squadra">Squadra:</label>
+            <input type="text" name="squadra" id="squadra" value="" maxlength="20"/>
+        </div>
+
+        <div>
+            <label for="ruolo">Ruolo:</label>
+            <input type="text" name="ruolo" id="ruolo" value="" maxlength="20"/>
+        </div>
+
+        <div>
+            <label for="altezza">Altezza (cm):</label>
+            <input type="number" name="altezza" id="altezza" min="1" max="250"/>
+        </div>
+
+        <div>
+            <label for="maglia">Maglia:</label>
+            <input type="number" name="maglia" id="maglia" min="1" max="99"/>
+        </div>
+
+        <div>
+            <label for="magliaNazionale">Maglia Nazionale:</label>
+            <input type="number" name="magliaNazionale" id="magliaNazionale" min="1" max="99"/>
+        </div>
+
+        <div>
+            <label for="puntiTot">Punti Totali:</label>
+            <input type="number" name="peso" id="peso" min="1"/>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend for="riconoscimenti">Riconoscimenti</legend>
+        <textarea name="riconoscimenti" id="riconoscimenti" cols="30" rows="10"></textarea>
+    </fieldset>
+
+    <fieldset>
+        <legend for="note">Note</legend>
+        <textarea name="note" id="note" cols="30" rows="10"></textarea>
+    </fieldset>
+
+    <fieldset>
+        <legend>Immagine</legend>
+        <input type="file" name="immagine" id="immagine">
+    </fieldset>
+</form>
