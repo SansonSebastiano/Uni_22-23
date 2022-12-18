@@ -1,0 +1,10 @@
+\contentsline {section}{\numberline {1}Modelli di Programmazione Lineare}{3}{}%
+\contentsline {subsection}{\numberline {1.1}Formulazione standard}{3}{}%
+\contentsline {subsubsection}{\numberline {1.1.1}Domini}{3}{}%
+\contentsline {subsection}{\numberline {1.2}Alcuni schemi base di modellazione}{3}{}%
+\contentsline {subsubsection}{\numberline {1.2.1}Modelli di copertura di costo minimo}{3}{}%
+\contentsline {subsubsection}{\numberline {1.2.2}Modelli di mix ottimo di produzione}{3}{}%
+\contentsline {subsubsection}{\numberline {1.2.3}Modelli di trasporto}{3}{}%
+\contentsline {subsection}{\numberline {1.3}Tipologia di Funzioni Obiettivo}{3}{}%
+\contentsline {subsection}{\numberline {1.4}Modelli con vincoli di tipo logico}{4}{}%
+\contentsline {section}{\numberline {2}Programmazione Lineare e Metodo del Simplesso}{4}{}%
