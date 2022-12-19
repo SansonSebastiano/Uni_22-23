@@ -20,6 +20,45 @@ if ($connACK) {
 
         foreach($playerslist as $player){
             // creare i vari dt e dd
+            $playersString .= "<dt>".$player["nome"];
+            if($player['capitano']){
+                $playersString .= "- <em>Capitano</em>";
+            }
+            $playersString .= "</dt>"
+            . '<dd><img src="' . $player['immagine'] . '" alt="" />'
+            . '<dl class="giocatore"> <dt>Data di nascita</dt>'
+            . '<dd>' . $player['dataNascita'] . '</dd>'
+            . '<dt>Luogo di nascita</dt>'
+            . '<dd>' . $player['luogo'] . '</dd>'
+            . '<dt>Squadra</dt>'
+            . '<dd>' . $player['squadra'] . '</dd>'
+            . '<dt>Ruolo</dt>'
+            . '<dd>' . $player['ruolo'] . '</dd>'
+            . '<dt>Altezza</dt>'
+            . '<dd>' . $player['altezza'] . '</dd>'
+            . '<dt>Maglia</dt>'
+            . '<dd>' . $player['maglia'] . '</dd>'
+            . '<dt>Maglia nazionale</dt>'
+            . '<dd>' . $player['magliaNazionale'] . '</dd>';
+
+            if($player['ruolo'] != 'Libero'){
+                $playersString .= '<dt> Punti totali</dt>';
+            }else{
+                $playersString .= '<dt> Ricezioni</dt>';
+            }
+            $playersString .= '<dd>' . $player['punti'] . '</dd>';
+
+            if($player['riconoscimenti']){
+                $playersString .= '<dt class="riconoscimenti">Riconoscimenti</dt>'
+                . '<dd>' . $player['riconoscimenti'] . '</dd>';
+            }
+
+            if($player['note']){
+                $playersString .= '<dt class="note">Note</dt>'
+                . '<dd>' . $player['note'] . '</dd>';
+            }
+
+            $playersString .= '</dl></dd>';
         }
 
         $playersString .= '</dl>';

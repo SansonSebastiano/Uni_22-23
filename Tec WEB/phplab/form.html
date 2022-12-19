@@ -1,29 +1,33 @@
 <form action="">
     <fieldset>
-        <legend>Nome e Cognome del giocatore</legend>
-        <label for="nome">Nome e Cognome:</label>
-        <input type="text" name="nome" id="nome"  value="" maxlength="50"/>
+        <legend>Informazioni generali</legend>
+
+        <div>
+            <label for="nome">Nome e Cognome:</label>
+            <input type="text" name="nome" id="nome"  value="<valoreNome/>" maxlength="50" required/>
+        </div>
+
+        <div>
+            <label for="data">Data:</label> 
+            <input type="date" name="data" id="data" value="<valoreData/>" maxlength="10" required/>
+        </div>
+
+        <div>
+            <label for="luogo">Luogo:</label>
+            <input type="text" name="luogo" id="luogo" value="<valoreLuogo/>" maxlength="20" required/>
+        </div>
     </fieldset>
 
     <fieldset>
         <legend>Ruolo di capitano</legend>
 			<div>
-				<label for="si">Si</label>
-				<input type="radio" name="capitano" id="si" value="si">
+				<label for="capitano_si">Si</label>
+				<input type="radio" name="capitano" id="capitano_si" value="1">
 			</div>
 			<div>
-				<label for="no">No</label>
-				<input type="radio" name="capitano" id="no" value="no">
+				<label for="capitano_no">No</label>
+				<input type="radio" name="capitano" id="capitano_no" value="0" checked>
 			</div>
-    </fieldset>
-
-    <fieldset>
-        <legend>Nascita</legend>
-        <label for="data">Data:</label> 
-        <input type="date" name="data" id="data" value="" maxlength="10"/>
-
-        <label for="luogo">Luogo:</label>
-        <input type="text" name="luogo" id="luogo" value="" maxlength="20"/>
     </fieldset>
 
     <fieldset>
@@ -34,13 +38,13 @@
         </div>
 
         <div>
-            <label for="ruolo">Ruolo:</label>
+            <label for="ruolo">Ruolo:</label> <!-- da cambiare in select -->
             <input type="text" name="ruolo" id="ruolo" value="" maxlength="20"/>
         </div>
 
         <div>
             <label for="altezza">Altezza (cm):</label>
-            <input type="number" name="altezza" id="altezza" min="1" max="250"/>
+            <input type="number" name="altezza" id="altezza" min="130" max="250"/>
         </div>
 
         <div>
@@ -55,7 +59,7 @@
 
         <div>
             <label for="puntiTot">Punti Totali:</label>
-            <input type="number" name="peso" id="peso" min="1"/>
+            <input type="number" name="peso" id="peso" min="0"/>
         </div>
     </fieldset>
 
@@ -72,5 +76,11 @@
     <fieldset>
         <legend>Immagine</legend>
         <input type="file" name="immagine" id="immagine">
+    </fieldset>
+
+    <fieldset>
+        <legend>Conferma</legend>
+        <input type="submit" value="Inserisci">
+        <input type="reset" value="Cancella">
     </fieldset>
 </form>
