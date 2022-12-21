@@ -36,6 +36,30 @@ class DBAccess{
     public function closeDBConnection(){
         mysqli_close($this->connection);
     }
+
+    public function insertNewPlayer($nome, $capitano, $dataNascita, $luogo, $squadra, $ruolo, $altezza, $maglia, $magliaNazionale, $punti, $riconoscimenti, $note){
+        $query = "INSERT INTO 'giocatori' ('nome', 'capitano', 'dataNascita', 'luogo', 'squadra', 'ruolo', 'altezza', 'maglia', 'magliaNazionale', 'punti', 'riconoscimenti', 'note') VALUES ('$nome', $capitano, $dataNascita, '$luogo', '$squadra', '$ruolo', $altezza, '$maglia', '$magliaNazionale', '$punti', $riconoscimenti, $note)";
+        
+        $queryResult = mysqli_query($this->connection, $query) or die("Errore in openDBConnection: " . mysqli_error($this->connection));
+
+        if ((mysqli_affected_rows($this->connection)) > 0) { // controlla quante righe sono state modificate
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function deletePlayer($id){
+        $query = "DELETE FROM giocatori WHERE id = $id";
+        
+        $queryResult = mysqli_query($this->connection, $query) or die("Errore in openDBConnection: " . mysqli_error($this->connection));
+
+        if ((mysqli_affected_rows($this->connection)) > 0) { // controlla quante righe sono state modificate
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
 
 ?>
