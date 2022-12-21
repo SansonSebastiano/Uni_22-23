@@ -9,11 +9,11 @@
         <meta name="keywords" content="pallavolo, volley, maschile, Italia, campionato, mondiale, Simone Giannelli, Fabio Balaso, Gianluca Galassi, Lavia"/>
         <meta name="author" content="Sebastiano Sanson"/>
 
-        <link rel="shortcut_icon" type="images/png" href="images/favicon.ico"/>
         <link rel="stylesheet" href="css/grid_style.css" media="handled, screen"/> <!-- rimuove gli sfondi -->
         <link rel="stylesheet" href="css/print.css" media="print"/>
-        <link rel="stylesheet" href="css/mini.css" media="handled, only screen and (max-width: 600px)"/> <!-- max-device : riferito alla dimensione del device | max-width : riferito allo schermo -->
+        <link rel="stylesheet" href="css/mini.css" media="handled, screen and (max-width: 600px), only screen and (max-device-width: 600px)"/> <!-- max-device : riferito alla dimensione del device | max-width : riferito allo schermo -->
 
+        <link rel="shortcut icon" type="./materialePerStudenti/images/png" href="../images/favicon.png"/>
     </head>
     <body id="homePage">
         <header>
@@ -21,18 +21,15 @@
             <h2>La pallavolo maschile italiana</h2>
         </header>
  
-        <nav id="breadcrumb" aria-label="percorso">
+        <nav id="breadcrumb">
             <p>Ti trovi in: 
                 <span lang="en">Home</span>
             </p>
         </nav>
 
-        <a class="aiuti" href="#contenuto">Vai al contenuto</a>
-        <a class="aiuti" href="#news">Vai alle news</a>
-
-        <nav id="menu" aria-label="menu del sito">
+        <nav id="menu">
             <ul>
-                <li id="currentLink" lang="en" aria-current="page">Home</li>
+                <li id="currentLink">Home</li>
                 <li><a href="allenatore.html">L'allenatore</a></li>
                 <li><a href="squadra.html">La squadra</a></li>
                 <li><a href="fairplay.html">Il <span lang="en">Fairplay</span></a></li>
@@ -56,7 +53,7 @@
             </dl>
         </aside>
 
-        <main id="contenuto">
+        <main>
             <h1>Campionato mondiale di pallavolo maschile 2022</h1>
             <p>
                 Il campionato mondiale di pallavolo maschile 2022 si è svolto dal 26 agosto all'11 settembre 2022 a <span lang="pl">Gliwice</span> e <span lang="pl">Katowice</span>, in Polonia, e a Lubiana, in Slovenia. Originariamente prevista in Russia, la competizione è stata spostata a seguito dell'invasione russa dell'Ucraina.
@@ -66,7 +63,7 @@
                 Al torneo hanno partecipato ventiquattro squadre nazionali. L’ultimo giorno sul podio sono salite l’Italia (vincitrice per la quarta volta), seguita dalla Polonia e dal Brasile. L’Italia, inoltre, vanta anche: 
             </p>
 
-            <dl id="premi">
+            <dl>
                 <dt>il premio 
                     <span lang="en">
                         <abbr>MVP (Most Valuable Player)</abbr>
@@ -98,7 +95,7 @@
                 Il campionato è stato giocato in due fasi:
             </p>
 
-            <ul class="list">
+            <ul>
                 <li>una prima fase a gironi, disputata con girone all'italiana: le prime due classificate di ogni girone e le quattro migliori terze hanno acceduto alla fase finale.</li>
                 <li>a fase finale, disputata con ottavi di finale, quarti di finale, semifinali, finale per il terzo posto e finale.</li>
             </ul>  
@@ -107,7 +104,7 @@
                 La classifica è stata stilata in base ai criteri che vengono utilizzati per tutte le tipologie di campionato di pallavolo, ovvero: 
             </p>
 
-            <ul class="list">
+            <ul>
                 <li>se il risultato finale è di 3-0 o 3-1 vengono assegnati 3 punti alla squadra vincente e 0 a quella sconfitta;</li>
                 <li>se il risultato finale è di 3-2 vengono assegnati 2 punti alla squadra vincente e 1 a quella sconfitta.</li>
             </ul>
@@ -115,11 +112,11 @@
         </main>
 
         <footer>
-            <img class="imgValidCode" src="images/valid-xhtml10.png" alt="Valid XHTML" />
+            <img class="imgValidCode" src="./materialePerStudenti/images/valid-xhtml10.png" alt="Valid XHTML" />
             <p>
-                Sebastiano Sanson &amp; Federazione Italiana Pallavolo - <span lang="en">All rights reserved</span>
+                Sebastiano Sanson - Federazione Italiana Pallavolo - <span lang="en">All rights reserved</span>
             </p>
-            <img class="imgValidCode" src="images/vcss-blue.gif" alt="Valid CSS" />
+            <img class="imgValidCode" src="./materialePerStudenti/images/vcss-blue.gif" alt="Valid CSS" />
         </footer>
     </body>
 </html>

@@ -1,5 +1,7 @@
 <?php
 
+// CHIEDERE IL TESTING DI QUESTO FILE SUL SERVER
+
 namespace DB;
 class DBAccess{
     private const DB_HOST = "localhost";

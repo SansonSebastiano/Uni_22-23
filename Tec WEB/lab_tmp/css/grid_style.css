@@ -43,7 +43,7 @@ Sfondo
 ======================
 */
 html{
-	background-image: url('../images/bg.png');
+	background-image: url('./images/bg.png');
 	background-size: contain;
 }
 /*
@@ -55,40 +55,35 @@ del content
 body{
 	max-width: 1024px;
 	border:  1px solid #000;
-    background-color: var(--bgcolor);
+}
+/*
+----------------------
+a
+----------------------
+*/
+
+
+body{
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-areas: 
         "h h h"
         "b b b"
         "m c n"
-        "m c n"
         "f f f";
 }
 
-#homepage{
-    grid-template-areas: "h h h"
-                         "b b b"
-                         "m c n"
-                         "m c n"
-                         "f f f";
-}
-
 header{
-    color: var(--txtcolor);
     text-align:  center;
-    padding: 1em;
-    padding-top: 0.7em;
-    margin: 0.5em;
     grid-area: h;
-    border: 1px var(--contentxtcolor);
-    background: url('../images/giannellipalleggio.jpg') right bottom no-repeat,
-                url('../images/michielettocoppa.jpg') left top no-repeat;
-    background-size: 20%,20%;
+    grid-row: 1;
+    background: url('./images/giannellipalleggio.jpg') right bottom no-repeat,
+                url('./images/michielettocoppa.jpg') left top no-repeat;
+                background-size: 20%,20%;
 }
 
-header > h1{
-    background-image: url('../images/logo_fipav.svg');
+header h1{
+    background-image: url('./images/logo_fipav.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -97,22 +92,17 @@ header > h1{
     font-size: 6em;
 }
 
-header > h2{
+header h2{
 	font-size:  1.8em;
 	padding: 0.5em;
 	margin-top:  0.3em;
 }
 
-header img{
-    padding-right: 4em;
-}
-
 #breadcrumb{
     background-color:var(--breadcolor);
     color: var(--txtcolor);
-    border:  1px var(--contentxtcolor);
+    border:  1px solid #000;
     font-size: 1.1em;
-    padding: 0.5em 0em 0.5em 1em;
     grid-area: b;
 }
 
@@ -124,27 +114,10 @@ header img{
 	color: var(--visitedcolor);
 }
 
-/*
-====================== AIUTI ======================
-*/
-
-.aiuti{
-    position: absolute;
-    height: 1px;
-    width: 1px;
-    overflow: hidden;
-    clip: rect(1px, 1px, 1px, 1px);
-}
-
-/*
-====================== MENU ======================
-*/
-
 #menu{
     grid-area: m;
     font-size:  1.3em;
 	padding:  0.8em;
-    line-height: 1.5em;
 }
 
 #menu a:link{
@@ -159,24 +132,23 @@ header img{
 	list-style-type: none;
 }
 
+#menu ul li{
+	margin-top: 0.5em;
+}
+
 #currentLink{
-    background: url('../images/favpng_volleyball-icon.png');
-    background-position: left;
-    background-repeat: no-repeat;
+    background: url('./images/favpng_volleyball-icon.png') left center no-repeat;
     background-size: 1.2em;
     padding-left: 1.5em;
 }
-
-/*
-====================== ASIDE ======================
-*/
 
 aside{
     grid-area: n;
     background-color: var(--bgcolor);
 	color:  var(--txtcolor);
 }
-aside > h2 {
+aside h2 {
+	font-size: 1.2em;
 	background-color: var(--newscolor);
 	color:  var(--newstxtcolor);
 	padding: 0.2em;
@@ -191,55 +163,39 @@ aside dt {
 	font-weight: bold;
 }
 
-/*
-====================== MAIN ======================
-*/
 
 main{
     grid-area: c;
     color: var(--contentxtcolor);
  	background-color: var(--contentbgcolor);
-    padding: 1.75em;
-    border: 1px solid var(--contentxtcolor);
-}
-
-main h1{
-    padding: 0.7em;
-    padding-top: 0.1em;
-    text-align: center;
-    line-height: 1.5em;
-}
-
-main h2{
-    padding-top: 0.7em;
-    padding-bottom: 0.7em;
 }
 
 main>dl{
     width: 95%;
+    margin: auto;
  }
 
- #giocatori > dt{
+ #giocatori>dt{
     background-color: var(--breadcolor);
     color: var(--txtcolor);
     font-size: 1.1em;
     padding: 0.5em;
     border: 1px solid black;
-    margin-top: 1em;
  }
 
- #giocatori > dd{
-    border: 1px solid var(--contentxtcolor);
+ #giocatori>dd{
+    border: 1px solid black;
     border-top: none;
+    margin-bottom: 1.0em;
     padding: 0.5em;
  }
 
-#giocatori > dd img{
+#giocatori>dd img{
     width: 20%;
     float: left;
 }
 
-#giocatori > dd dl{
+#giocatori>dd dl{
     margin-left: 25%;
 }
 
@@ -257,32 +213,11 @@ dt.riconoscimenti{
     float: none;
 }
 
-#premi dt {
-    background-image: url("../images/favpng_volleyball-icon.png");
-    background-repeat: no-repeat;
-    background-position: left;
-    background-size: 1.2em;
-    padding-left: 1.3em;
-}
-
-#premi dd{
-    margin-left: 1.3em;
-}
-
-#premi{
-    margin-left: 2em;
-}
-
-/*
-====================== FOOTER ======================
-*/
-
 footer{
     grid-area: f;
 	background-color: var(--breadcolor);
 	color: var(--txtcolor);
     text-align: center;
-    border: 1px solid var(--contentxtcolor);
 }
 
 footer p{
@@ -291,32 +226,5 @@ footer p{
     font-size: 0.8em;
 }
 
-#de_giorgi{
-    width:35%;
-    float:left; 
-    padding: 1em;
-    border-radius: 0% 30% 30% 0%;
-}
-
-thead,tfoot{
-    background-color: var(--breadcolor);
-    color: #FFF;
-}
-
-table, th, td {
-    border: 2px solid black;
-    text-align: center;
-    border-collapse: collapse;
-}
-
-table{
-    width: 95%;
-}
-th,td{
-    padding: 0.5em;
-}
-caption{
-    font-weight: bold;
-    font-size: 1.6em;
-    padding: 0.7em;
+#imgValidCode{   
 }
