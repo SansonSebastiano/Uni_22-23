@@ -1,4 +1,4 @@
-<form action="">
+<form id="newPlayer" method="post" action="nuovoGiocatore.php" onsubmit="return formValidation()">
     
     <messaggiForm/>
 
@@ -7,7 +7,7 @@
 
         <div>
             <label for="nome">Nome e Cognome:</label>
-            <input type="text" name="nome" id="nome"  value="<valoreNome/>" maxlength="50" required/>
+            <input type="text" name="nome" id="nome"  value="<valoreNome/>" maxlength="50" onblur="checkNome()"/>
         </div>
 
         <div>
@@ -83,7 +83,71 @@
 
     <fieldset>
         <legend>Conferma</legend>
-        <input type="submit" value="Inserisci">
-        <input type="reset" value="Cancella">
+        <input type="submit" value="Inserisci" onclick="validateForm()">
+        <input type="reset" value="Cancella" onclick="resetForm()">
     </fieldset>
 </form>
+
+<!--DA SISTEMARE-->
+
+<script>
+    // check if a field is empty
+    function isEmpty(field, alertMsg) {
+        if (field == "") {
+            alert(alertMsg);
+            return true;
+        } else {
+            return false;
+        }
+    }
+</script>
+
+<script>
+    function validateForm() {
+        alertMsg = " non puo' essere vuoto";
+        // check if name field is empty
+        var name = document.forms["newPlayer"]["nome"].value;
+        if (isEmpty(name, "Il nome" + alertMsg)) return false;
+        else {
+            // check if name field contain only letters and one empty space
+            var regex = /^[a-zA-Z]+ [a-zA-Z]+$/;
+            if (!regex.test(name)) {
+                alert("Il nome deve contenere solo lettere");
+                return false;
+            }
+        }
+
+        // check if date field is empty
+        var date = document.forms["newPlayer"]["data"].value;
+        if (isEmpty(date, "La data" + alertMsg)) return false;
+
+        // check if place field is empty
+        var place = document.forms["newPlayer"]["luogo"].value;
+        if (isEmpty(place, "Il luogo" + alertMsg)) return false;
+        else {
+            // check if place field contain only letters
+            var regex = /^[a-zA-Z]+$/;
+            if (!regex.test(place)) {
+                alert("Il luogo deve contenere solo lettere");
+                return false;
+            }
+        }
+
+
+    }
+</script>
+
+<script>
+    function resetForm() {
+        document.getElementById("newPlayer").reset();
+    }
+</script>
+
+<!--
+    - array associativo contenente i campi da controllare, i rispettivi criteri di validazione e messaggi di errore
+    - caricamento :
+        - campoDefault(input)
+        - campoPerInput(input)
+        - validazioneCampo(input)
+        - messaggioErrore(input)
+-->

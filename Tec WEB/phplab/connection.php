@@ -1,7 +1,5 @@
 <?php
 
-// CHIEDERE IL TESTING DI QUESTO FILE SUL SERVER
-
 namespace DB;
 class DBAccess{
     private const DB_HOST = "localhost";
@@ -20,7 +18,7 @@ class DBAccess{
     }
 
     public function getList(){
-        $query = "SELECT * FROM 'giocatori' ORDER BY 'ID' ASC";
+        $query = "SELECT * FROM giocatori ORDER BY id ASC";
         
         $queryResult = mysqli_query($this->connection, $query) or die("Errore in openDBConnection: " . mysqli_error($this->connection));
         

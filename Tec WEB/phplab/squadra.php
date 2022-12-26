@@ -1,6 +1,6 @@
 <?php
 use DB\DBAccess;
-require_once "..".DIRECTORY_SEPARATOR."connection.php";
+require_once ".".DIRECTORY_SEPARATOR."connection.php";
 
 $HTMLPage = file_get_contents("squadra.html");
 
