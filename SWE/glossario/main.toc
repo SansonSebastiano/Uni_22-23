@@ -1,0 +1,56 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {1}A}{5}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Architettura Software}{5}{subsection.1.1}%
+\contentsline {section}{\numberline {2}B}{6}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Best Practice}{6}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Baseline}{6}{subsection.2.2}%
+\contentsline {section}{\numberline {3}C}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Ciclo di vita}{7}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Controllo di Qualità}{7}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Componente}{7}{subsection.3.3}%
+\contentsline {section}{\numberline {4}D}{8}{section.4}%
+\contentsline {section}{\numberline {5}E}{9}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Efficacia}{9}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Efficienza}{9}{subsection.5.2}%
+\contentsline {section}{\numberline {6}F}{10}{section.6}%
+\contentsline {section}{\numberline {7}G}{11}{section.7}%
+\contentsline {section}{\numberline {8}H}{12}{section.8}%
+\contentsline {section}{\numberline {9}I}{13}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Iterazione}{13}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Incremento}{13}{subsection.9.2}%
+\contentsline {section}{\numberline {10}J}{14}{section.10}%
+\contentsline {section}{\numberline {11}K}{15}{section.11}%
+\contentsline {section}{\numberline {12}L}{16}{section.12}%
+\contentsline {section}{\numberline {13}M}{17}{section.13}%
+\contentsline {subsection}{\numberline {13.1}Modelli di ciclo di vita}{17}{subsection.13.1}%
+\contentsline {subsection}{\numberline {13.2}Misurazione quantitativa}{17}{subsection.13.2}%
+\contentsline {subsection}{\numberline {13.3}Milestone}{17}{subsection.13.3}%
+\contentsline {subsection}{\numberline {13.4}Modulo}{17}{subsection.13.4}%
+\contentsline {section}{\numberline {14}N}{18}{section.14}%
+\contentsline {section}{\numberline {15}O}{19}{section.15}%
+\contentsline {section}{\numberline {16}P}{20}{section.16}%
+\contentsline {subsection}{\numberline {16.1}Progetto}{20}{subsection.16.1}%
+\contentsline {subsection}{\numberline {16.2}Processi di ciclo di vita}{20}{subsection.16.2}%
+\contentsline {subsection}{\numberline {16.3}Processo}{20}{subsection.16.3}%
+\contentsline {subsection}{\numberline {16.4}Prototipo}{20}{subsection.16.4}%
+\contentsline {subsection}{\numberline {16.5}Piano di Qualifica}{21}{subsection.16.5}%
+\contentsline {subsection}{\numberline {16.6}Piano della Qualità}{21}{subsection.16.6}%
+\contentsline {section}{\numberline {17}R}{22}{section.17}%
+\contentsline {subsection}{\numberline {17.1}Riuso}{22}{subsection.17.1}%
+\contentsline {subsection}{\numberline {17.2}Requisiti}{22}{subsection.17.2}%
+\contentsline {section}{\numberline {18}S}{23}{section.18}%
+\contentsline {subsection}{\numberline {18.1}Stakeholder}{23}{subsection.18.1}%
+\contentsline {subsection}{\numberline {18.2}Software Engineering}{23}{subsection.18.2}%
+\contentsline {subsection}{\numberline {18.3}Sistema Qualità}{23}{subsection.18.3}%
+\contentsline {section}{\numberline {19}T}{24}{section.19}%
+\contentsline {subsection}{\numberline {19.1}Teamwork}{24}{subsection.19.1}%
+\contentsline {section}{\numberline {20}U}{25}{section.20}%
+\contentsline {subsection}{\numberline {20.1}Unità}{25}{subsection.20.1}%
+\contentsline {section}{\numberline {21}V}{26}{section.21}%
+\contentsline {subsection}{\numberline {21.1}Verifica}{26}{subsection.21.1}%
+\contentsline {subsection}{\numberline {21.2}Validazione}{26}{subsection.21.2}%
+\contentsline {section}{\numberline {22}W}{27}{section.22}%
+\contentsline {subsection}{\numberline {22.1}Way of Working}{27}{subsection.22.1}%
+\contentsline {section}{\numberline {23}X}{28}{section.23}%
+\contentsline {section}{\numberline {24}Y}{29}{section.24}%
+\contentsline {section}{\numberline {25}Z}{30}{section.25}%
